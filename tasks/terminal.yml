@@ -1,4 +1,3 @@
----
 # Custom Terminal theme.
 - name: Get current Terminal profile.
   command: defaults read com.apple.terminal 'Default Window Settings'
@@ -22,7 +21,17 @@
 - name: Ensure custom Terminal profile is set as default.
   command: "{{ item }}"
   with_items:
-    - defaults write com.apple.terminal 'Default Window Settings' -string JJG-Term
-    - defaults write com.apple.terminal 'Startup Window Settings' -string JJG-Term
+  - defaults write com.apple.terminal 'Default Window Settings' -string JJG-Term
+  - defaults write com.apple.terminal 'Startup Window Settings' -string JJG-Term
   changed_when: false
   when: "'JJG-Term' not in terminal_theme.stdout"
+
+- name: Run Oh My Zsh installation script
+  command: "sh -c \"$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\""
+
+- name: Install starship prompt
+  shell:
+    cmd: "curl -fsSL https://starship.rs/install.sh | sh"
+    expect:
+    - "? Install Starship latest to /usr/local/bin? [y/N]"
+    send: "y\n"

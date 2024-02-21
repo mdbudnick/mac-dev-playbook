@@ -1,4 +1,3 @@
----
 downloads: ~/.ansible-downloads/
 
 configure_dotfiles: true
@@ -28,67 +27,70 @@ dotfiles_repo: https://github.com/mdbudnick/mac-dotfiles.git
 dotfiles_repo_accept_hostkey: true
 dotfiles_repo_local_destination: ~/Development/GitHub/dotfiles
 dotfiles_files:
-  - .zshrc
-  - .gitignore
-  - .inputrc
-  - .osx
-  - .vimrc
+- .zshrc
+- .gitignore
+- .inputrc
+- .osx
+- .vimrc
 
 homebrew_installed_packages:
-  # - ansible # Installed via Pip.
-  - awscli
-  - autoconf
-  - bash-completion
-  - doxygen
-  - gettext
-  - gifsicle
-  - git
-  - github/gh/gh
-  - go
-  - gpg
-  - httpie
-  - iperf
-  - istiocli
-  - kn
-  - knative-client
-  - knctl
-  - kpack-logs
-  - kubectl
-  - libevent
-  - sqlite
-  - mcrypt
-  - minica
-  - minikube
-  - nmap
-  - node
-  - nvm
-  - php
-  - riff
-  - ssh-copy-id
-  - cowsay
-  - readline
-  - openssl
-  - pv
-  - wget
-  - wrk
-  - zsh-history-substring-search
+# - ansible # Installed via Pip.
+- awscli
+- autoconf
+- autojump
+- azure-cli
+- bash-completion
+- doxygen
+- gettext
+- gifsicle
+- git
+- github/gh/gh
+- go
+- gpg
+- httpie
+- iperf
+- istiocli
+- kn
+- knative-client
+- knctl
+- kpack-logs
+- kubectl
+- libevent
+- sqlite
+- mcrypt
+- minica
+- minikube
+- nmap
+- node
+- nvm
+- php
+- riff
+- ssh-copy-id
+- cowsay
+- readline
+- openssl
+- pv
+- wget
+- wrk
+- zsh-history-substring-search
+- zsh-syntax-highlighting
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
-  - 1password
-  - 1password-cli
-  - chromedriver
-  - docker
-  - firefox
-  - google-chrome
-  - handbrake
-  - postman
-  - slack
-  - sublime-text
-  - transmit
-  - discord
-  - visual-studio-code
-  - spotify
+- 1password
+- 1password-cli
+- chromedriver
+- docker
+- firefox
+- google-chrome
+- handbrake
+- postman
+- slack
+- sublime-text
+- transmit
+- discord
+- visual-studio-code
+- spotify
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
@@ -122,18 +124,18 @@ configure_sublime: false
 sublime_base_path: '~/Library/Application Support/Sublime Text'
 sublime_config_path: "Packages/User"
 sublime_package_control:
-  - "DocBlockr"
-  - "Dockerfile Syntax Highlighting"
-  - "FileDiffs"
-  - "GitHub Flavored Markdown Preview"
-  - "Jinja2"
-  - "Package Control"
-  - "PHP-Twig"
-  - "Pretty JSON"
-  - "SublimeLinter"
-  - "SublimeLinter-contrib-yamllint"
-  - "TrailingSpaces"
-  - "WordCount"
+- "DocBlockr"
+- "Dockerfile Syntax Highlighting"
+- "FileDiffs"
+- "GitHub Flavored Markdown Preview"
+- "Jinja2"
+- "Package Control"
+- "PHP-Twig"
+- "Pretty JSON"
+- "SublimeLinter"
+- "SublimeLinter-contrib-yamllint"
+- "TrailingSpaces"
+- "WordCount"
 
 # Glob pattern to ansible task files to run after all other tasks are finished.
 post_provision_tasks: []
